@@ -9,7 +9,8 @@
 <body>
     <h1>Confirm Deletion</h1>
     <p>Are you sure you want to delete this order?</p>
-    <form action="{{ url_for('confirm_delete', order_id=order_id) }}" method="post">
+    <form action="{{ url_for('confirm_delete') }}" method="post">
+        <input type="hidden" name="order_id" value="{{ order_id }}">
         <button type="submit" name="confirm" value="Yes">Yes</button>
         <button type="submit" name="confirm" value="No">No</button>
     </form>

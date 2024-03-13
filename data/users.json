@@ -18,5 +18,15 @@
         "email": "boss@pizza.com",
         "password": "password",
         "role": "s"
+    },
+    {
+        "email": "c@barles.com",
+        "password": "password",
+        "role": "c"
+    },
+    {
+        "email": "josh@boss.com",
+        "password": "password",
+        "role": "s"
     }
 ]

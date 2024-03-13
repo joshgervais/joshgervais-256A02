@@ -106,20 +106,25 @@ def delete_order(order_id):
     delete_pizza_order(order_id)
     flash('Order deleted successfully!', 'success')
     return redirect(url_for('orders'))
-
-@app.route('/confirm_delete/<int:order_id>', methods=['GET', 'POST'])
+@app.route('/confirm_delete', methods=['GET', 'POST'])
 @login_required
-def confirm_delete(order_id):
-    if request.method == 'POST':
-        if request.form.get('confirm') == 'Yes':
-            delete_pizza_order(order_id)
-            flash('Order deleted successfully!', 'success')
-            return redirect(url_for('orders'))
-        else:
-            return redirect(url_for('orders'))
+@role_required('s')
+def confirm_delete():
+    if request.method == 'GET':
+        order_id = request.args.get('order_id', type=int)
+    else:
+        order_id = request.form.get('order_id', type=int)
     
-    return render_template('confirm_delete.html', order_id=order_id)
-
+    if order_id is None:
+        flash('Order ID is missing.', 'danger')
+        return redirect(url_for('orders'))
+    
+    # Now 'order_id' is correctly obtained for both GET and POST methods
+    if request.method == 'POST' and request.form.get('confirm') == 'Yes':
+        delete_pizza_order(order_id)
+        flash('Order deleted successfully!', 'success')
+    
+    return redirect(url_for('orders')) if request.method == 'POST' else render_template('confirm_delete.html', order_id=order_id)
 
 
 if __name__ == '__main__':
