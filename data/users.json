@@ -13,5 +13,10 @@
         "email": "josh@gervais.com",
         "password": "password",
         "role": "s"
+    },
+    {
+        "email": "boss@pizza.com",
+        "password": "password",
+        "role": "s"
     }
 ]
