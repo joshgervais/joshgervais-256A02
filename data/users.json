@@ -1,0 +1,17 @@
+[
+    {
+        "email": "admin@pizzaservice.com",
+        "password": "admin",
+        "role": "s"
+    },
+    {
+        "email": "jimbo@bimbo.com",
+        "password": "password",
+        "role": "c"
+    },
+    {
+        "email": "josh@gervais.com",
+        "password": "password",
+        "role": "s"
+    }
+]
