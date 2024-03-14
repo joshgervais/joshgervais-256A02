@@ -1,88 +1,88 @@
+/* Base layout and typography */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fafafa;
     color: #333;
-    margin: 20px;
+    padding: 20px;
     font-size: 16px;
 }
 
+/* Form styling */
 form {
     background: #fff;
-    padding: 30px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     margin: 20px auto;
 }
 
+/* Responsive grid layout for orders */
+.order-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Order card styling */
 .order {
     background: #fff;
     border: 1px solid #e0e0e0;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Navigation link styling */
+nav a {
+    color: #000000;
+    background-color: #ee1c2e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #b31217;
+}
+
+/* Form inputs and button styling */
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="submit"],
-select {
-    width: 100%;
+select,
+button {
     padding: 10px;
-    margin: 10px 0 20px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    box-sizing: border-box;
-    display: block;
 }
 
-input[type="submit"] {
-    background-color: #007bff;
+input[type="submit"],
+button {
+    background-color: #ee1c2e;
     color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
 }
 
-input[type="submit"]:hover, 
-input[type="submit"]:focus {
-    background-color: #0056b3;
-}
-
-.alert {
-    padding: 15px;
-    background-color: #f44336;
-    color: white;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-
+/* Alert message styling */
 .alert-success {
     background-color: #4caf50;
 }
 
 .alert-danger {
-    background-color: #f44336;
+    background-color: #ee1c2e;
 }
 
+/* Link styling */
 a, a:visited {
-    color: #007bff;
-    text-decoration: none;
+    color: #000000;
 }
 
 a:hover, a:focus {
     text-decoration: underline;
 }
 
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-    body {
-        margin: 10px;
-    }
-
-    form {
-        padding: 20px;
-        margin: 10px;
+    .order-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
