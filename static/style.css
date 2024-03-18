@@ -43,6 +43,14 @@ nav a {
     border: 1px solid #b31217;
 }
 
+a {
+    color: #000000;
+    background-color: #ee1c2e;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #b31217;
+}
+
 /* Form inputs and button styling */
 input[type="text"],
 input[type="password"],

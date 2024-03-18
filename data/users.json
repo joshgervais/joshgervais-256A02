@@ -28,5 +28,10 @@
         "email": "josh@boss.com",
         "password": "password",
         "role": "s"
+    },
+    {
+        "email": "josh@gervais.com",
+        "password": "1234",
+        "role": "s"
     }
 ]

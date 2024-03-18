@@ -20,7 +20,7 @@ app.config['SECRET_KEY'] = 'very_secret_key'
 # Route for home page
 @app.route('/')
 def index():
-    return 'Welcome to the Pizza Delivery Service!'
+    return render_template('home.html', title='Home')
 
 # Route for handling login with form validation and session management
 @app.route('/login', methods=['GET', 'POST'])
